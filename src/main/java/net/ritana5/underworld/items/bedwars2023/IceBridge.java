@@ -1,11 +1,11 @@
-package net.ritana5.underworld.items.bedwars1058;
+package net.ritana5.underworld.items.bedwars2023;
 
-import com.andrei1058.bedwars.api.language.Language;
-import com.hakan.core.HCore;
-import net.ritana5.underworld.Underworld;
-import net.ritana5.underworld.api.bedwars1058.UnderworldItem;
 import com.cryptomorin.xseries.XSound;
-import net.ritana5.underworld.listeners.bedwars1058.BedWarsListener;
+import com.hakan.core.HCore;
+import com.tomkeuper.bedwars.api.language.Language;
+import net.ritana5.underworld.Underworld;
+import net.ritana5.underworld.api.bedwars2023.UnderworldItem;
+import net.ritana5.underworld.listeners.bedwars2023.BedWarsListener;
 import org.bukkit.*;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
@@ -67,7 +67,7 @@ public class IceBridge extends UnderworldItem {
                     Vector perp = new Vector(-direction.getZ(), 0, direction.getX()).normalize();
                     double offsetX = j * perp.getX();
                     double offsetZ = j * perp.getZ();
-                    Location location = new Location(world, Math.round(finalX + offsetX), y-1, Math.round(finalZ + offsetZ));
+                    Location location = new Location(world, Math.round(finalX + offsetX), y - 1, Math.round(finalZ + offsetZ));
                     Block block = world.getBlockAt(location);
                     if (!block.getType().isSolid()) {
                         XSound.BLOCK_GLASS_BREAK.play(location, 1.0f, 0.5f);

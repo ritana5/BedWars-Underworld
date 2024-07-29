@@ -1,14 +1,14 @@
-package net.ritana5.underworld.items.bedwars1058;
+package net.ritana5.underworld.items.bedwars2023;
 
-import com.andrei1058.bedwars.api.language.Language;
 import com.cryptomorin.xseries.XMaterial;
 import com.cryptomorin.xseries.XTag;
 import com.hakan.core.HCore;
+import com.tomkeuper.bedwars.api.language.Language;
 import net.ritana5.underworld.Underworld;
-import net.ritana5.underworld.api.bedwars1058.UnderworldItem;
-import net.ritana5.underworld.bedwars1058.API;
-import net.ritana5.underworld.listeners.bedwars1058.BedWarsListener;
-import net.ritana5.underworld.utils.bedwars1058.ConfigUtils;
+import net.ritana5.underworld.api.bedwars2023.UnderworldItem;
+import net.ritana5.underworld.bedwars2023.API;
+import net.ritana5.underworld.listeners.bedwars2023.BedWarsListener;
+import net.ritana5.underworld.utils.bedwars2023.ConfigUtils;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
@@ -51,13 +51,14 @@ public class Emerald extends UnderworldItem {
     public boolean execute(Player player) {
         return false;
     }
+
     @Override
     public boolean execute(Player player, Block block) {
         if (player == null || block == null) {
             // Player or block is null, return false
             return false;
         }
-        if(!API.getBedwarsAPI().getArenaUtil().getArenaByPlayer(player).isBlockPlaced(block)){
+        if (!API.getBedwarsAPI().getArenaUtil().getArenaByPlayer(player).isBlockPlaced(block)) {
             player.sendMessage(Language.getMsg(player, "item-rotation.Bridge-Zapper.deny"));
             return false;
         }

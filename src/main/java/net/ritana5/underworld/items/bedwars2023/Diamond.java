@@ -1,10 +1,10 @@
-package net.ritana5.underworld.items.bedwars1058;
+package net.ritana5.underworld.items.bedwars2023;
 
-import com.andrei1058.bedwars.api.language.Language;
 import com.hakan.core.HCore;
+import com.tomkeuper.bedwars.api.language.Language;
 import net.ritana5.underworld.Underworld;
-import net.ritana5.underworld.api.bedwars1058.UnderworldItem;
-import net.ritana5.underworld.listeners.bedwars1058.BedWarsListener;
+import net.ritana5.underworld.api.bedwars2023.UnderworldItem;
+import net.ritana5.underworld.listeners.bedwars2023.BedWarsListener;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
@@ -45,6 +45,7 @@ public class Diamond extends UnderworldItem {
     public boolean execute(Player player) {
         return false;
     }
+
     @Override
     public boolean execute(Player player, Block block) {
         return false;

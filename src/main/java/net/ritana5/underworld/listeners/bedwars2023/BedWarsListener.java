@@ -1,19 +1,21 @@
-package net.ritana5.underworld.listeners.bedwars1058;
+package net.ritana5.underworld.listeners.bedwars2023;
 
-import com.andrei1058.bedwars.api.arena.GameState;
-import com.andrei1058.bedwars.api.arena.IArena;
-import com.andrei1058.bedwars.api.arena.team.ITeam;
-import com.andrei1058.bedwars.api.events.gameplay.GameStateChangeEvent;
-import com.andrei1058.bedwars.api.events.player.PlayerBedBreakEvent;
-import com.andrei1058.bedwars.api.events.player.PlayerKillEvent;
-import com.andrei1058.bedwars.api.language.Language;
-import com.andrei1058.bedwars.support.papi.SupportPAPI;
-import com.cryptomorin.xseries.XSound;
 import com.hakan.core.HCore;
+import com.tomkeuper.bedwars.api.arena.GameState;
+import com.tomkeuper.bedwars.api.arena.IArena;
+import com.tomkeuper.bedwars.api.arena.team.ITeam;
+import com.tomkeuper.bedwars.api.events.gameplay.GameStateChangeEvent;
+import com.tomkeuper.bedwars.api.events.player.PlayerBedBreakEvent;
+import com.tomkeuper.bedwars.api.events.player.PlayerKillEvent;
+import com.tomkeuper.bedwars.api.language.Language;
+import com.tomkeuper.bedwars.support.papi.SupportPAPI;
 import net.ritana5.underworld.Underworld;
 import net.ritana5.underworld.language.MessagePath;
-import net.ritana5.underworld.support.bedwars1058.BedWars1058;
-import org.bukkit.*;
+import net.ritana5.underworld.support.bedwars2023.BedWars2023;
+import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
+import org.bukkit.Location;
+import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;
@@ -27,13 +29,12 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.scheduler.BukkitRunnable;
-import org.bukkit.util.Vector;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-import static com.andrei1058.bedwars.api.language.Language.getList;
+import static com.tomkeuper.bedwars.api.language.Language.getList;
 
 public class BedWarsListener implements Listener {
     private static final Random random = new Random();
@@ -161,7 +162,7 @@ public class BedWarsListener implements Listener {
     @EventHandler
     public void onGameStart(GameStateChangeEvent event) {
         arena = event.getArena();
-        if (BedWars1058.isMode(arena) && event.getNewState() == GameState.playing) {
+        if (BedWars2023.isMode(arena) && event.getNewState() == GameState.playing) {
             HCore.registerListeners(new ShopListener());
             Bukkit.getScheduler().runTaskLater(JavaPlugin.getPlugin(Underworld.class), () -> {
                 for (ITeam team : arena.getTeams()) {

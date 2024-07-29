@@ -1,9 +1,8 @@
-package net.ritana5.underworld.listeners.bedwars1058;
+package net.ritana5.underworld.listeners.bedwars2023;
 
-import com.andrei1058.bedwars.api.language.Language;
 import com.hakan.core.HCore;
-import net.ritana5.underworld.api.bedwars1058.UnderworldItem;
-import net.ritana5.underworld.bedwars1058.API;
+import net.ritana5.underworld.api.bedwars2023.UnderworldItem;
+import net.ritana5.underworld.bedwars2023.API;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
