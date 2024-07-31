@@ -9,14 +9,3 @@
 # these groups are in the groups, use /bw arenaGroup set <arena-name> <group-name>. #
 arena-groups:
   - "underworld_solo"
-#  Here you can change the emerald amount, delay, and spawnlimit of the forge upgrade due to  #
-# a lack of the ability to set them to spawn automatically in the code of the BedWars plugins #
-generator:
-  emerald:
-    amount: 1
-    delay: 15
-    spawnlimit: 8
-# Enable this if you want to send the BRIDGE MODE ACTIVATED and BRIDGE MODE DEACTIVATED #
-#         in chat for the player alongside being already sent to the actionbar.         #
-messages:
-  send-bridge-mode-message-to-chat-list: false
