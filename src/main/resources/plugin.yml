@@ -12,3 +12,7 @@ softdepend:
   - BedWars1058
   - BedWars2023
   - hCore
+commands:
+  bw:
+    description: "Manage iron ingots for players."
+    usage: "/bw <givesouls/removesouls> <player> <amount>"

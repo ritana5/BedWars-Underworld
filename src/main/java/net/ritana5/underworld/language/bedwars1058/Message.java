@@ -55,6 +55,10 @@ public class Message {
             yml.addDefault(MESSAGES_SOUL_PLURAL, "Souls");
             yml.addDefault(MESSAGES_MAIN_NAME, "&bUnderworld Trading");
             yml.addDefault(MESSAGES_MAIN_LORE, Arrays.asList("&7Collect souls by killing", "&7players, mobs, and breaking", "&7beds.", "", "&7Your souls: &b%souls%", "", "&eClick to open!"));
+            yml.addDefault(MESSAGES_INVALID_PLAYER, "&cPlayer not found.");
+            yml.addDefault(MESSAGES_INVALID_AMOUNT, "&cInvalid amount.");
+            yml.addDefault(MESSAGES_ADMIN_ONLY, "&cThis command can only be run by a player or an admin.");
+            yml.addDefault(MESSAGES_UNKNOWN_COMMAND, "&cUnknown Command.");
             yml.options().copyDefaults(true);
             l.save();
         }

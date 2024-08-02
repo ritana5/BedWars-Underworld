@@ -1,5 +1,5 @@
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ #
-# |              BedWars-Rush               | #
+# |              BedWars-Underworld               | #
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ #
 #                                                                                   #
 #    Here you can list the arena groups that will be used for the Rush gamemode.    #
@@ -9,3 +9,5 @@
 # these groups are in the groups, use /bw arenaGroup set <arena-name> <group-name>. #
 arena-groups:
   - "underworld_solo"
+# Here you can set the slot you want the Underworld Trading menu to be in #
+menu-slot: 46

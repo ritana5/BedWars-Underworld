@@ -40,7 +40,7 @@ public class ShopListener implements Listener {
                 .name(true, itemName)
                 .lores(true, itemLore)
                 .build();
-        inv.setItem(46, item);
+        inv.setItem(JavaPlugin.getPlugin(Underworld.class).menuSlot, item);
     }
 
     @EventHandler

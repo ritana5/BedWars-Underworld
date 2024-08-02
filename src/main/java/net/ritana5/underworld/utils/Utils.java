@@ -13,7 +13,7 @@ public class Utils {
     }
 
     public static void info(String text) {
-        Bukkit.getConsoleSender().sendMessage("[BedWars-Rush] " + color(text));
+        Bukkit.getConsoleSender().sendMessage("[BedWars-Underworld] " + color(text));
     }
 
     public static void sendActionBar1058(Player player, String message) {

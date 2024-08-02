@@ -6,7 +6,7 @@
 
     <groupId>net.ritana5</groupId>
     <artifactId>BedWars-Underworld</artifactId>
-    <version>BETA-1.0</version>
+    <version>BETA-1.1</version>
     <packaging>jar</packaging>
 
     <name>BedWars-Underworld</name>

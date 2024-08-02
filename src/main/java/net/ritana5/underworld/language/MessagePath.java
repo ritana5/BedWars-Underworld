@@ -34,4 +34,8 @@ public class MessagePath {
     public static final String MESSAGES_ENDER_NAME_CHAT = MESSAGES_ADDON_MESSAGES_PATH + "ender.item-nameChat";
     public static final String MESSAGES_ENDER_LORE = MESSAGES_ADDON_MESSAGES_PATH + "ender.item-lore";
     public static final String MESSAGES_SOUL_PLURAL = MESSAGES_ADDON_MESSAGES_PATH + "meaning-souls-plural";
+    public static final String MESSAGES_INVALID_PLAYER = MESSAGES_ADDON_MESSAGES_PATH + "invalid-player";
+    public static final String MESSAGES_INVALID_AMOUNT = MESSAGES_ADDON_MESSAGES_PATH + "invalid-amount";
+    public static final String MESSAGES_ADMIN_ONLY = MESSAGES_ADDON_MESSAGES_PATH + "admin-only";
+    public static final String MESSAGES_UNKNOWN_COMMAND = MESSAGES_ADDON_MESSAGES_PATH + "unknown-command";
 }

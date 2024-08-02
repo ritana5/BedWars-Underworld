@@ -24,6 +24,7 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
 import org.bukkit.event.block.BlockPlaceEvent;
+import org.bukkit.event.entity.EntityDeathEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
@@ -141,6 +142,23 @@ public class BedWarsListener implements Listener {
     }
 
     @EventHandler
+    public void onEntityDeath(EntityDeathEvent event) {
+        // Check if the entity is a Zombie, Skeleton, or Giant
+        if (event.getEntity().getType() == EntityType.ZOMBIE ||
+                event.getEntity().getType() == EntityType.SKELETON ||
+                event.getEntity().getType() == EntityType.GIANT) {
+
+            // Get the killer of the entity
+            Player killer = event.getEntity().getKiller();
+
+            if (killer != null) {
+                // Give souls
+                JavaPlugin.getPlugin(Underworld.class).getSouls().put(killer, JavaPlugin.getPlugin(Underworld.class).getSouls().get(killer) + 3);
+            }
+        }
+    }
+
+    @EventHandler
     public void onKill(PlayerKillEvent e) {
         Player player = e.getKiller();
         Player victim = e.getVictim();
@@ -168,7 +186,7 @@ public class BedWarsListener implements Listener {
                 for (ITeam team : arena.getTeams()) {
                     for (Player player : new ArrayList<>(team.getMembers())) {
                         ps = player;
-                        JavaPlugin.getPlugin(Underworld.class).getSouls().put(player, 1000);
+                        JavaPlugin.getPlugin(Underworld.class).getSouls().put(player, 0);
                         for (String tutorialMessage : getList(player, MessagePath.MESSAGES_ARENA_START_TUTORIAL)) {
                             player.sendMessage(SupportPAPI.getSupportPAPI().replace(player, tutorialMessage));
                         }

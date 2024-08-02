@@ -87,7 +87,7 @@ public class BedWars1058 {
         Bukkit.getConsoleSender().sendMessage("[BedWars1058] " + color("The BedWars-Underworld addon was originally contributed to by IAmTheDefender."));
         Utils.info("&4B&ce&6d&eW&aa&9r&5s&d-&8U&7n&8d&7e&8r&7w&8o&7r&8l&7d");
         Underworld.log.info("Plugin Version: " + JavaPlugin.getPlugin(Underworld.class).getDescription().getVersion());
-        if (!(JavaPlugin.getPlugin(Underworld.class).getDescription().getVersion().equals("BETA-1.0"))) {
+        if (!(JavaPlugin.getPlugin(Underworld.class).getDescription().getVersion().equals("BETA-1.1"))) {
             Underworld.log.info("WARNING: You are using an outdated version of the plugin! Please update at or (WIP)");
         } else {
             Underworld.log.info(("You are running on the latest release!"));
